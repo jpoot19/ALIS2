@@ -1,0 +1,166 @@
+</div>
+<!-- modal de finalizar mensajes -->
+<div id='outputMenuModal' class="modal fade menuContext" data-audio="menu-de-envio-de-mensaje">
+    <div class="modal-body text-center">
+        <button data-target='#monitorMenuModal' data-toggle='modal' type='button' data-audio='mostrar' class='btn btn-default menuOption'>
+            <img src="/images/mostrar.png" >
+            <span>Mostrar</span>
+        </button>
+        <br>
+        <br>
+        <button onclick='loadFacebookContacts()' type='button' class='btn btn-default menuOption' data-audio='enviar'>
+            <img src="/images/messenger.png" >
+            <span>Enviar</span>
+        </button>
+        <br>
+        <br>
+        <button onclick='loadTelegramContacts()' type='button' class='btn btn-default menuOption' data-audio='enviar'>
+            <img src="/images/telegram.png" >
+            <span>Enviar</span>
+        </button>
+        <br>
+        <br>
+        <div id="ytOption"></div>
+        <br>
+        <br>
+        <button id='saveMessage' onclick='saveMessage()' style='display:none' type='button' class='btn btn-default menuOption disabled' data-audio='guardar'>
+            <img src="/images/guardar.png" >
+            <span>Guardar</span>
+        </button>
+        <button id='deleteMessage' onclick='deleteMessage()' style='display:none' type='button' class='btn btn-default menuOption disabled' data-audio='eliminar-mensaje'>      
+            <img src="/images/eliminar_palabra.png" >
+            <span>ELIMINAR M.</span>
+        </button>
+    </div>
+    <div class="modal-footer">
+        <div class="text-left">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- modal  videoJuegos -->
+
+<div id='juegosMenuModal' class="modal fade menuContext" data-audio="escoge-un-juego">
+    <div class="modal-body text-center">
+        
+        <button onclick='openAdivina()' type='button' class='btn btn-default menuOption' data-audio='Adivina-Quien'>
+            <img src="/images/adivina.png" >
+            <span>AdivinaQuien</span>
+        </button>
+        <br>
+        <br>
+        <button onclick='openFlappy()' data.toggle ="model" type='button' class='btn btn-default menuOption' data-audio='Flappy-Bird'>
+            <img src="/images/flappy.png" >
+            <span>FlappyBird</span>
+        </button>
+    </div>
+    <div class="modal-footer">
+    <div class="text-left">
+        <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+    </div>
+  </div>
+</div>
+<!-- modal de salidas de pantalla -->
+<div id='monitorMenuModal' class="modal fade menuContext" data-audio='opciones-de-pantalla'>
+    <div class="modal-body text-center">
+        <button onclick='showMonitorPublic()' data-audio="monitor-publico" type='button' class='btn btn-default menuOption'>
+            <img src="/images/public.png" >
+            <span>Monitor P�blico</span>
+        </button>
+        <br>
+        <br>
+        <button onclick='showMonitorPrivate()' type='button' class='btn btn-default menuOption' data-audio="mensaje-privado">
+            <img src="/images/private.png" >
+            <span>Mensaje Privado</span>
+        </button>
+    </div>
+    <div class="modal-footer">
+        <div class="text-left">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+<div id='monitorModal' data-onclose='closeMonitorModal' class="menuContext modal fade bg-success">
+    <div class="modal-body bg-default text-center">
+        <div class='text-uppercase'>
+            <h3 class='monitorTitle _1'></h3>
+            <h2 class='monitorTitle _2'></h2>
+            <h3 class='monitorTitle _3'></h3>
+            <h2 class='monitorTitle _4'></h2>
+        </div>
+        <br>
+        <br>
+        <div class="text-center">
+            <button style='display:none' type='button' onclick="newMessage()" class='menuOption btn btn-info disabled' data-audio='crear-nuevo-mensaje'>
+                <i class='fa fa-2x fa-pencil'></i>
+                <span>&nbsp;Nuevo mensaje &nbsp;</span>
+            </button>
+            <br><br>
+            <button type='button' onclick='closeAllModals()' class='menuOption btn btn-info' data-audio='regresar-al-inicio'>
+                <i class='fa fa-2x fa-share fa-rotate-180'></i>
+                <span>Regresar al inicio</span>
+            </button>
+        </div>
+        <br>
+    </div>
+    <div class="modal-footer">
+        <div class="text-center">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+<!-- modal de salidas de pantalla -->
+<div id='selectContactModal' class="modal fade menuContext" data-audio="seleccione-un-contacto">
+    <div class="modal-body text-center"></div>
+    <div class="modal-footer">
+        <div class="text-left">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+
+<div id='savedMessageModal' data-onclose='closeMonitorModal' class="menuContext modal fade">
+    <div class="modal-body bg-default text-center">
+        <h3 id="tittleModalMG"></h3>
+        <h3 class="text-left msgToDiv">
+            <b>Mensaje:</b><span id="msgTextMG"></span>
+        </h3>
+        <br>
+    </div>
+    <div class="modal-footer">
+        <div class="text-center">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+
+<div id='errorModal' class="menuContext modal fade">
+    <div class="modal-body">
+        <h3></h3>
+    </div>
+    <div class="modal-footer">
+        <div class="text-center">
+            <button type='button' class='returnButton brn-xs btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+        </div>
+    </div>
+</div>
+
+
+<script src='/jquery/dist/jquery.min.js'></script>
+<script src='/jquery-dateFormat/dist/jquery-dateFormat.min.js'></script>
+<script src='/bootstrap/dist/js/bootstrap.min.js'></script>
+<script src='/js/bootstrap-modal.js'></script>
+<script src='/js/bootstrap-modalmanager.js'></script>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script src='/js/plugins.js'></script>
+<script src='/js/responsive-voice.js'></script>
+<script src='/js/menu.js'></script>
+<script src='/js/clicker.js'></script>
+
+<% if(typeof extraJs != 'undefined'){ %>
+    <script src='/js/<%= extraJs %>.js'></script>
+    <% } %>
+        </body>
+
+        </html>

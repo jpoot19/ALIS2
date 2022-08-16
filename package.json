@@ -1,0 +1,25 @@
+{
+  "name": "alis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.5",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.1.1",
+    "sqlite3": "^4.0.2",
+    "telegram-bot-bootstrap": "0.0.15"
+  }
+}

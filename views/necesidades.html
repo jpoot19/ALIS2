@@ -1,0 +1,43 @@
+<% include header.html %>
+<div class="menuContext text-center" data-audio='menu-de-necesidades-basicas'>
+<br><br>
+<br><br><br>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-2">
+      <button class='btn menuOption btn-default' data-msg="Quiero ir al baño" data-msgid="1" data-audio="quiero-ir-al-baño" onclick="selectNecesidad()">
+        <img src="/images/banio.png">
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button href='#' class='btn menuOption btn-default' data-audio="quiero-moverme" data-msgid="2" data-msg="Quiero moverme" onclick="selectNecesidad()">
+        <img src="/images/mover.png">
+      </button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-4">
+      <button class='btn menuOption btn-default' data-audio="tengo-sueño" data-msg="Tengo sueño" data-msgid="3"onclick="selectNecesidad()">
+        <img src="/images/sleep.png">
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button class='btn menuOption btn-default' data-audio="quiero-agua"  data-msgid="4" data-msg="Quiero agua" onclick="selectNecesidad()">
+        <img src="/images/bottle_water.png">
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button class='btn menuOption btn-default' data-audio="tengo-hambre" data-msg="Tengo hambre" data-msgid="5" onclick="selectNecesidad()">
+        <img src="/images/food.png">
+      </button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="text-center">
+      <a href='/' class='returnButton brn-xs btn btn-danger' ><i class='fa fa-2x fa-share fa-rotate-180'></i></a>
+  </div>
+</div>
+<% var extraJs = 'necesidades'; %>
+<% include footer.html %>

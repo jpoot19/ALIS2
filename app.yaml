@@ -1,0 +1,11 @@
+runtime: nodejs8
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: autoclear
+error_handlers:
+  - file: default_error.html
+
+  - error_code: over_quota
+    file: over_quota.html

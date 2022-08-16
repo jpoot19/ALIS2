@@ -1,0 +1,65 @@
+<% include header.html %>
+<script>
+  localStorage.setItem("audio",true);
+</script>
+<div class="menuContext text-center" data-audio='menu-principal'>
+<br><br>
+<br><br>
+  <div class="row">
+    <div class="col-xs-4">
+      <a href='#audioConfigModal' data-toggle='modal' class='btn menuOption btn-default' data-audio="dictado">
+        <img src="/images/escritura_modulo.png">
+      </a>
+    </div>
+    <div class="col-xs-4">
+      <button onclick="openNecesidadesMenu()" data-toggle='modal' class='btn menuOption btn-default' data-audio="necesidades-basicas">
+        <img src="/images/necesidades_modulo.png">
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button onclick="openVideos()" data-toggle='modal' class='btn menuOption btn-default' data-audio="multimedia">
+        <img src="/images/videos_modulo.png">
+      </button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-4">
+      <a href='' class='btn menuOption btn-default' data-audio="notificaciones">
+        <img src="/images/notifications-modulo.png">
+      </a>
+    </div>
+    <div class="col-xs-4">
+      <button type="button" data-target="#juegosMenuModal" data-toggle='modal' class='btn menuOption btn-default' data-audio="entretenimiento">
+        <img src="/images/entretenimiento_modulo.png">
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button onclick="openMessageSavedMenu()" data-toggle='modal' class='btn menuOption btn-default' data-audio="mensajes-guardados">
+        <img src="/images/mensajesg_modulo.png">
+      </button>      
+    </div>
+  </div>
+</div>
+<div id="audioConfigModal" data-audio="click-para-desactivar-el-audio-o-espera-para-continuar" data-onopen='openAudioConfigModal' data-onclose='closeAudioConfigModal' data-default-option='0' class="modal fade menuContext" tabindex="-1">
+  <div class="modal-body">
+    <div class="text-center">
+      <div class="text-center">
+        <h3>Click para desactivar el audio o espera para continuar</h3>
+        <a onclick='disableAudio(this)' href="#" class='menuOption optionSelected btn btn-defaut' >
+            <img src="/images/config_no_audio.png" >
+        </a>
+        <br>
+        <br>
+        <p><i class='fa fa-refresh fa-spin fa-3x'></i></p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="text-left">
+        <button type='button' class='btn-xs returnButton btn btn-danger' data-dismiss='modal'><i class='fa fa-2x fa-share fa-rotate-180'></i></button>
+    </div>
+  </div>
+</div>
+<% var extraJs = 'main'; %>
+<% include footer.html %>
